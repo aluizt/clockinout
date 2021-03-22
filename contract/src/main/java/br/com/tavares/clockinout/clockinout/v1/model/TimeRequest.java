@@ -1,31 +1,29 @@
 package br.com.tavares.clockinout.clockinout.v1.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.br.CPF;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class TimeRequest {
-    @NotBlank
-    @Schema(defaultValue = "25048")
+    @NotBlank(message = "User ID is required !")
+    @Size(min = 0, max = 5)
+    @Schema(description = "User ID", example = "25048")
     private String userId;
 
-    @NotBlank
-    @DateTimeFormat(pattern = "dd-MM-yyyy")
-    @Schema(defaultValue = "20-02-2021")
+    @NotBlank(message = "The date is required !")
+    @Schema(description = "Date period worked", example = "20-02-2021")
     private String date;
 
-    @NotBlank
-    @Schema(defaultValue = "13:17")
+    @NotBlank(message = "Time is required !")
+    @Schema(description = "Worked hours", example = "08:30")
     private String time;
 }

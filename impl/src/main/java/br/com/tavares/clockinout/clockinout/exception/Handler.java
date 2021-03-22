@@ -1,5 +1,6 @@
 package br.com.tavares.clockinout.clockinout.exception;
 
+import org.springframework.core.MethodParameter;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -15,7 +16,7 @@ public class Handler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ErrorModel handleValidationExceptions(MethodArgumentNotValidException e) {
         return ErrorModel.builder()
-                .message("Error")
+                .message("Check the data provided !")
                 .error(e.getMessage())
                 .status(HttpStatus.BAD_REQUEST)
                 .build();
