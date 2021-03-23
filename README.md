@@ -25,7 +25,7 @@ Digite sudo docker-compose up -d
 
 #### Aplicação
 ``` 
-Apos subir o conteiner com o MongoDb, abrir um novo terminal na raiz da aplicação.
+Após subir o conteiner com o MongoDb, abrir um novo terminal na raiz da aplicação.
 
 Digite ./gradlew clean build
 Digite ./gradlew bootRun
