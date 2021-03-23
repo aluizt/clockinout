@@ -19,8 +19,8 @@
 
 #### MongoDB
 ```  
-Abra o terminal na raiz do projeto onde esta o arquivo docker-compose
-Digite docker-compose up -d
+Abra o terminal na raiz do projeto onde está o arquivo docker-compose
+Digite sudo docker-compose up -d
 ``` 
 
 #### Aplicação
