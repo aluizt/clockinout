@@ -70,8 +70,10 @@ allprojects {
 		implementation 'org.springframework.boot:spring-boot-devtools'
 		annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 		compileOnly 'org.projectlombok:lombok'
+		compile("com.google.code.gson:gson")
 		annotationProcessor 'org.projectlombok:lombok'
 		testImplementation 'org.springframework.boot:spring-boot-starter-test'
+		testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.7.1'
 		errorprone("com.google.errorprone:error_prone_core:2.4.0")
 	}
 

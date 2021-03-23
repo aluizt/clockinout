@@ -79,7 +79,7 @@ public class TimeService {
                 .anyMatch(time -> LocalTime.parse(timeModel.getTime()).isBefore(time.plusHours(1)));
     }
 
-    public LocalTime getLastRecord(List<LocalTime> times) {
+    private LocalTime getLastRecord(List<LocalTime> times) {
         return times
                 .parallelStream()
                 .max(LocalTime::compareTo)
