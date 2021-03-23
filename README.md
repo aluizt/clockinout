@@ -35,7 +35,7 @@ Ou através de sua IDE
 
 #### OpenApi
 ```
-Com a palicação rodando, digitar no seu navegador.
+Com a aplicação rodando, digitar no seu navegador.
 
 http://127.0.0.1:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/
 ``` 
